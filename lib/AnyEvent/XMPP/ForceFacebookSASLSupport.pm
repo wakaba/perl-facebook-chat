@@ -10,6 +10,7 @@ our $APIKey;
 our $AccessToken;
 
 sub enable_facebook_sasl_support_for_anyevent_xmpp (&) {
+    no warnings 'redefine';
     my $code = shift;
     require AnyEvent::XMPP::Writer;
     require Authen::SASL;
